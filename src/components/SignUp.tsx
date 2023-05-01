@@ -1,53 +1,77 @@
-import React from "react"
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
-import Button from "@mui/material/Button"
-import Grid from "@mui/material/Grid"
+import React from "react";
+import {Link} from "react-router-dom";
+import CloseIcon from '@mui/icons-material/Close';
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 
-function signUp() {
-    return (
+import image1 from "./somefolder/images/graphic element2.svg"
+
+const SignUp = () => (
+    <>
+        <Box sx={{
+            display: "flex",
+            position: "relative",
+            padding: "50px",
+            right: "50px",
+
+        }}>
+            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+            <img src={image1} alt="image-dots"/>
+        </Box>
+
         <Box
             sx={{
                 width: "70%",
                 position: "relative",
-                background: "#f6f2f2",
+                background: "#ffffff",
                 padding: "30px",
                 justifyContent: "right",
+                bottom: "100px",
             }}
         >
-            <Button sx={{padding: "5px", color: "black", float: "right"}} variant="text">X</Button>
+        <Box textAlign="right">
+          <CloseIcon />
+        </Box>
 
             <h1>Sign up</h1>
 
             <Box sx={{marginTop: "30px"}}>Already have an account?</Box>
 
-            <a style={{color: "#2dacd6", textDecoration: "none"}} href="">Sign In</a>
+            <nav>
+                <Link style={{
+                    color: "#2dacd6",
+                    textDecoration: "none"
+                }} to="/signIn">Sign In
+                </Link>
+            </nav>
 
             <Box>
 
-                <Grid container rowGap="6.4px">
+                <Grid container rowGap="20px">
 
                     <TextField
-                        sx={{width: "100%", marginTop: "30px", minHeight: "13vh"}}
+                        sx={{width: "100%", marginTop: "30px"}}
                         id="outlined-basic"
                         label="Name/Surname"
                         variant="outlined"
                     />
 
-                    <TextField sx={{width: "100%", minHeight: "13vh"}}
+                    <TextField sx={{width: "100%"}}
                                id="outlined-basic"
                                label="Email"
                                variant="outlined"
                     />
 
-                    <TextField sx={{width: "100%", minHeight: "13vh"}}
+                    <TextField sx={{width: "100%"}}
                                id="outlined-password-input"
                                label="Password (6 + character, 1 capital letter, 1 number)"
                                type="password"
                                autoComplete="current-password"
                     />
-                    <Box>
+                    <Box sx={{marginBottom: "20px"}}>
                         <Checkbox/> Keep me signed in
                     </Box>
                 </Grid>
@@ -56,7 +80,7 @@ function signUp() {
 
             </Box>
         </Box>
+    </>
     )
-}
 
-export default signUp;
+export default SignUp;

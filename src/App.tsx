@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
+
 import SignUp from "./components/SignUp"
 
-function App() {
-  return (
+import './App.css';
+
+const App = () => (
     <div className="App">
-    <SignUp/>
+    <SignUp />
     </div>
-  );
-}
+  )
 
 export default App;

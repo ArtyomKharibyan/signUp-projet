@@ -6,14 +6,29 @@
 }
 
 body {
-  background: url("/src/components/somefolder/images/signup.png") no-repeat;
+  background: url("/src/components/somefolder/images/dzadzjan.png") no-repeat;
   background-size: contain;
   background-position: right;
-  width: 95%;
-  max-width: 100%;
-  height: auto;
+  background-color: #efffff;
+  width: 100%;
+  min-width: 315px;
   display: flex;
   justify-content: left;
-  padding: 45px;
+  padding: 30px;
   float: right ;
 }
+
+@media(min-width: 2000px) {
+  body {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    position: relative;
+    padding: 30px;
+    right: 550px
+  }
+}
+
+
+
+
