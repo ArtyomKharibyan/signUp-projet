@@ -20,8 +20,6 @@ const MyButton = styled(Button)({
     width: "100%",
 });
 
-
-// eslint-disable-next-line max-lines-per-function
 const SignUp = () => (
 
     <Box sx={{height: "10px"}}>
