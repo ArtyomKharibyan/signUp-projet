@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import {ReactComponent as Boy} from './somefolder/images/boy.svg';
 import {ReactComponent as Dots} from './somefolder/images/dots.svg';
 import {ReactComponent as Girl} from './somefolder/images/girl.svg';
+import {ReactComponent as Vector} from './somefolder/images/vector.svg';
 
 const MyButton = styled(Button)({
     background: 'linear-gradient(45deg, #56b8d1 30%, #4339cc 90%)',
@@ -44,14 +45,12 @@ const SignUp = () => (
                 left: "40px",
                 borderRadius: "5px",
                 bottom: "160px",
+                zIndex: "1"
             }}
         >
 
             <Box>
-                <h1 style={{
-                    position: "relative",
-                    bottom: "30px"
-                }}>Create Account</h1>
+                <h1 style={{position: "relative", bottom: "30px"}}>Create Account</h1>
 
                 <button className="googleButton" type="button" style={{
                     cursor: "pointer",
@@ -82,14 +81,13 @@ const SignUp = () => (
 
                     <Grid container rowGap="25px">
 
-                        <TextField className="form" sx={{width: "100%"}} label="First Name"
+                        <TextField sx={{width: "100%"}} label="First Name"
                                    InputProps={{
                                        style: {
                                            borderRadius: "250px",
                                        }
                                    }}
                                    size="small"/>
-
 
                         <TextField sx={{width: "100%"}} label="Last Name"
                                    InputProps={{
@@ -99,8 +97,6 @@ const SignUp = () => (
                                        }
                                    }}
                                    size="small"/>
-
-                        <br/>
 
                         <TextField sx={{width: "100%"}} label="Email"
                                    InputProps={{
@@ -134,12 +130,13 @@ const SignUp = () => (
 
                     </Grid>
 
-                    <MyButton sx={{color: "#ffffff", borderRadius: "100px", width: "100%", marginTop: "25px"}}>Create
-                        Account</MyButton>
+                    <MyButton sx={{color: "#ffffff", borderRadius: "100px", width: "100%", marginTop: "25px"}}>Create Account</MyButton>
 
                     <Box sx={{position: "relative", top: "40px"}}>
 
-                        <p>Already have an account? <a style={{textDecoration: "none", color: "#58b1f5"}} href="Login">Log In</a></p>
+                        <p style={{color: "silver"}}> Already have an account?
+                            <a style={{textDecoration: "none", color: "#58b1f5"}} href="Login">Log In</a>
+                        </p>
 
                     </Box>
 
@@ -147,29 +144,32 @@ const SignUp = () => (
             </Box>
         </Box>
 
-        <Box className="logos" sx={{
+        <Box sx={{
             justifyContent: "right",
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            backgroundPosition: "right",
             position: "relative",
             bottom: "820px",
             display: "flex",
+            height: "10px"
         }}>
 
-            <Girl style={{
-                minWidth: "20%",
-                minHeight: "550px"
+            <Vector style={{
+                height: "950px",
+                width: "70%",
+                bottom: "290px",
+                position: "relative",
+                left: "560.2px",
+                zIndex: "-1"
             }}/>
 
-            <Boy style={{
-                minWidth: "20%",
-                minHeight: "550px"
-            }}/>
+            <Girl style={{minWidth: "20%", minHeight: "550px"}}/>
+
+            <Boy style={{minWidth: "20%", minHeight: "550px"}}/>
 
         </Box>
     </Box>
-    )
+)
 
 
 export default SignUp;
