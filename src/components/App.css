@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #f0f5f7;
+  background: #e9eff5;
 }
 
 .googleButton {
@@ -22,6 +22,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 70%;
+}
+
+.vector {
+    min-height: 1050px;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    background-image: url("/public/vector.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
 }
 
 @media screen and (max-width: 1198px) {

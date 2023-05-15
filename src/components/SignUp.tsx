@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/styles";
@@ -14,7 +15,7 @@ const MyButton = styled(Button)({
   border: 0,
   borderRadius: "100",
   boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-  color: "red",
+  color: "white",
   height: 48,
   padding: "20px 30px",
   width: "100%",
@@ -96,15 +97,16 @@ const SignUp = () => (
               </MyButton>
 
               <Box sx={{ position: "relative", top: "40px" }}>
-                <p style={{ color: "silver" }}>
+                <nav style={{ color: "silver" }}>
                   Already have an account?
-                  <a
+                  <Link
                     style={{ textDecoration: "none", color: "#58b1f5" }}
-                    href="Login"
+                    to="/signIn"
                   >
+                    {" "}
                     Log In
-                  </a>
-                </p>
+                  </Link>
+                </nav>
               </Box>
             </Box>
           </Box>

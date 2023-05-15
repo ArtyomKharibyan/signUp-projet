@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import SignUp from "./components/SignUp"
+import SignUp from "./components/SignUp";
 
-import './App.css';
+import "./components/App.css";
 
 const App = () => (
-    <div className="App">
+  <div className="App">
     <SignUp />
-    </div>
-  )
+  </div>
+);
 
 export default App;
